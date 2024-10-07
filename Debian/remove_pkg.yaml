@@ -1,0 +1,7 @@
+- name: Remove package
+  hosts: '{{ grp }}'
+  tasks:
+    - name: Remove '{{ pkg }}' package
+      ansible.builtin.apt:    
+        name: '{{ pkg }}'
+        state: absent

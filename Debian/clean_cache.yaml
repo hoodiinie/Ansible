@@ -1,0 +1,6 @@
+- name: Clean APT cache
+  hosts: '{{ grp }}' 
+  tasks:
+    - name: apt clean
+      ansible.builtin.apt:    
+        clean: yes
